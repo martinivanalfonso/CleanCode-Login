@@ -19,14 +19,7 @@ export default function Login() {
   };
 
   return (
-    <div
-      style={{
-        padding: "20px",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-      }}
-    >
+    <div>
       {isLoggedIn ? (
         <p> Hello {username}</p>
       ) : (
