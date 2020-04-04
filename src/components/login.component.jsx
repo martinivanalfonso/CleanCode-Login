@@ -31,7 +31,6 @@ export default function Login() {
           {error && <p>{error}</p>}
           <input
             type="text"
-            name="username"
             placeholder="username"
             onChange={(e) =>
               dispatch({
@@ -43,7 +42,6 @@ export default function Login() {
           />
           <input
             type="password"
-            name="password"
             placeholder="password"
             onChange={(e) =>
               dispatch({
@@ -54,7 +52,7 @@ export default function Login() {
             }
           />
           <button type="submit" disable={isLoading}>
-            {isLoading ? "Loggin in..." : "Log in"}
+            {isLoading ? "Logging in..." : "Log in"}
           </button>
           <p>Test: user123 / password123</p>
         </form>
