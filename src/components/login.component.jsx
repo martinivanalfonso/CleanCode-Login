@@ -21,9 +21,12 @@ export default function Login() {
   return (
     <div>
       {isLoggedIn ? (
-        <p> Hello {username}</p>
+        <div>
+          <p> Hello {username}, you have succesfully logged in</p>
+          <button onClick={dispatch({ type: "logout" })}>Log out</button>
+        </div>
       ) : (
-        <form onSubmit={ e => handleSubmit(e)}>
+        <form onSubmit={(e) => handleSubmit(e)}>
           <h2>Welcome! please log in</h2>
           {error && <p>{error}</p>}
           <input
@@ -53,6 +56,7 @@ export default function Login() {
           <button type="submit" disable={isLoading}>
             {isLoading ? "Loggin in..." : "Log in"}
           </button>
+          <p>Test: user123 / password123</p>
         </form>
       )}
     </div>
